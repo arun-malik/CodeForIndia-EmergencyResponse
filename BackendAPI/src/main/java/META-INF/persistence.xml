@@ -6,7 +6,7 @@
 		<class>com.codeforindia.emrgncyres.model.NotificationHistory</class>
 		<class>com.codeforindia.emrgncyres.model.Tracking</class>
 		<class>com.codeforindia.emrgncyres.model.TrackingHistory</class>
-		<class>com.codeforindia.emrgncyres.model.UserDeatil</class>
+		<class>com.codeforindia.emrgncyres.model.UserDetails</class>
 		<class>com.codeforindia.emrgncyres.model.Vwuserdetail</class>
 		
 		<properties>
