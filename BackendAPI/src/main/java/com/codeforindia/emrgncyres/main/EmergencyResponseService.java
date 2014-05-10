@@ -1,9 +1,12 @@
 package com.codeforindia.emrgncyres.main;
 
-import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.codeforindia.emrgncyres.apiresource.AdminAPI;
+import com.codeforindia.emrgncyres.apiresource.TrackingAPI;
+import com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI;
+import com.codeforindia.emrgncyres.apiresource.UserAPI;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.assets.AssetsBundle;
 import com.yammer.dropwizard.config.Bootstrap;
@@ -13,6 +16,8 @@ import com.yammer.dropwizard.views.ViewBundle;
 public class EmergencyResponseService  extends Service<EmergencyResponseServiceConfiguration> {
 
 	private final Logger log = LoggerFactory.getLogger(getClass());
+	
+	
 
 	public static void main(String[] args) throws Exception {
 		new EmergencyResponseService().run(args);
@@ -33,6 +38,12 @@ public class EmergencyResponseService  extends Service<EmergencyResponseServiceC
 
 
 		environment.addResource(AdminAPI.class);
+		environment.addResource(UserAPI.class);
+		
+		environment.addResource(TrackingAPI.class);
+		environment.addResource(TrackingHistoryAPI.class);
+		
+		
 	}
 
 }

@@ -13,11 +13,15 @@ import java.util.List;
  */
 @Entity
 @Table(name="userDeatils")
-@NamedQuery(name="UserDeatil.findAll", query="SELECT u FROM UserDeatil u")
-public class UserDeatil implements Serializable {
+@NamedQueries({
+	@NamedQuery(name="UserDetails.findAll", query="SELECT u FROM UserDetails u"),
+	@NamedQuery(name="UserDetails.findByUserDetailsKey", query="SELECT u FROM UserDetails u where u.userDeatilsKey = :key")
+})
+
+public class UserDetails implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id  @GeneratedValue
 	@Column(unique=true, nullable=false)
 	private int userDeatilsKey;
 
@@ -62,7 +66,7 @@ public class UserDeatil implements Serializable {
 	@OneToMany(mappedBy="userDeatil")
 	private List<TrackingHistory> trackingHistories;
 
-	public UserDeatil() {
+	public UserDetails() {
 	}
 
 	public int getUserDeatilsKey() {

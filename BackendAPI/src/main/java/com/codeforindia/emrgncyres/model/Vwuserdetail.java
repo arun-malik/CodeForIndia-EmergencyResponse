@@ -1,7 +1,9 @@
 package com.codeforindia.emrgncyres.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.math.BigInteger;
 
 
@@ -11,7 +13,13 @@ import java.math.BigInteger;
  */
 @Entity
 @Table(name="vwuserdetails")
-@NamedQuery(name="Vwuserdetail.findAll", query="SELECT v FROM Vwuserdetail v")
+
+@NamedQueries({
+	@NamedQuery(name="vWfindAll", query="SELECT v FROM Vwuserdetail v"),
+	@NamedQuery(name="findUserByUserCodeOrName", query="SELECT v FROM Vwuserdetail v where v.firstName = :username or v.userCode = :username")
+})
+
+
 public class Vwuserdetail implements Serializable {
 	private static final long serialVersionUID = 1L;
 

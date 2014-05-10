@@ -1,6 +1,7 @@
 package com.codeforindia.emrgncyres.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -14,7 +15,7 @@ import javax.persistence.*;
 public class IncidentReported implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id  @GeneratedValue
 	@Column(unique=true, nullable=false)
 	private int incidentReportedKey;
 
@@ -30,7 +31,7 @@ public class IncidentReported implements Serializable {
 	//bi-directional many-to-one association to UserDeatil
 	@ManyToOne
 	@JoinColumn(name="userKey")
-	private UserDeatil userDeatil;
+	private UserDetails userDeatil;
 
 	public IncidentReported() {
 	}
@@ -67,11 +68,11 @@ public class IncidentReported implements Serializable {
 		this.reportedMessage = reportedMessage;
 	}
 
-	public UserDeatil getUserDeatil() {
+	public UserDetails getUserDeatil() {
 		return this.userDeatil;
 	}
 
-	public void setUserDeatil(UserDeatil userDeatil) {
+	public void setUserDeatil(UserDetails userDeatil) {
 		this.userDeatil = userDeatil;
 	}
 

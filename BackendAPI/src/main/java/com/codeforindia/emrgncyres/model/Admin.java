@@ -1,7 +1,9 @@
 package com.codeforindia.emrgncyres.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.util.List;
 
 
@@ -11,11 +13,11 @@ import java.util.List;
  */
 @Entity
 @Table(name="admin")
-@NamedQuery(name="Admin.findByUsername", query="SELECT a FROM Admin a")
+@NamedQuery(name="Admin.findByUsername", query="SELECT a FROM Admin a WHERE a.username= :username")
 public class Admin implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id  @GeneratedValue
 	@Column(unique=true, nullable=false)
 	private int adminKey;
 

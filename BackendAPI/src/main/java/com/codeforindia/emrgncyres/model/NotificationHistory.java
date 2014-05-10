@@ -1,6 +1,7 @@
 package com.codeforindia.emrgncyres.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -14,7 +15,7 @@ import javax.persistence.*;
 public class NotificationHistory implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id  @GeneratedValue
 	@Column(unique=true, nullable=false)
 	private int notificationHistoryKey;
 

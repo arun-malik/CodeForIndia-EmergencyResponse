@@ -1,7 +1,9 @@
 package com.codeforindia.emrgncyres.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.util.Date;
 
 
@@ -11,11 +13,17 @@ import java.util.Date;
  */
 @Entity
 @Table(name="trackingHistory")
-@NamedQuery(name="TrackingHistory.findAll", query="SELECT t FROM TrackingHistory t")
+
+@NamedQueries({
+	@NamedQuery(name="TrackingHistory.findAll", query="SELECT t FROM TrackingHistory t"),
+	@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u where u.userDeatilsKey = :key")
+})
+
+
 public class TrackingHistory implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id  @GeneratedValue
 	@Column(unique=true, nullable=false)
 	private int trackingHistoryKey;
 
@@ -39,7 +47,7 @@ public class TrackingHistory implements Serializable {
 	//bi-directional many-to-one association to UserDeatil
 	@ManyToOne
 	@JoinColumn(name="userDetailsKey")
-	private UserDeatil userDeatil;
+	private UserDetails userDeatil;
 
 	public TrackingHistory() {
 	}
@@ -100,11 +108,11 @@ public class TrackingHistory implements Serializable {
 		this.triggerAction = triggerAction;
 	}
 
-	public UserDeatil getUserDeatil() {
+	public UserDetails getUserDeatil() {
 		return this.userDeatil;
 	}
 
-	public void setUserDeatil(UserDeatil userDeatil) {
+	public void setUserDeatil(UserDetails userDeatil) {
 		this.userDeatil = userDeatil;
 	}
 
