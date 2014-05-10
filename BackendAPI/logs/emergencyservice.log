@@ -4084,3 +4084,78 @@ INFO  [2014-05-10 19:35:25,188] org.eclipse.jetty.server.Server: Graceful shutdo
 INFO  [2014-05-10 19:35:25,188] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
 INFO  [2014-05-10 19:35:27,241] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
 INFO  [2014-05-10 19:35:27,241] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 19:41:09,100] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 19:41:09,167] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 19:41:09,169] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 19:41:09,258] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 19:41:09,345] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkInHistory (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 19:41:09,345] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+ERROR [2014-05-10 19:41:09,751] com.sun.jersey.spi.inject.Errors: The following errors and warnings have been detected with resource and/or provider classes:
+  SEVERE: Conflicting URI templates. The URI template /checkInHistory for root resource class com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI and the URI template /checkInHistory transform to the same regular expression /checkInHistory(/.*)?
+WARN  [2014-05-10 19:41:09,754] /: unavailable
+! com.sun.jersey.spi.inject.Errors$ErrorMessagesException: null
+! at com.sun.jersey.spi.inject.Errors.processErrorMessages(Errors.java:170) ~[jersey-core-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.inject.Errors.postProcess(Errors.java:136) ~[jersey-core-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.inject.Errors.processWithErrors(Errors.java:199) ~[jersey-core-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.initiate(WebApplicationImpl.java:770) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.initiate(WebApplicationImpl.java:765) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.initiate(ServletContainer.java:489) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer$InternalWebComponent.initiate(ServletContainer.java:319) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.load(WebComponent.java:605) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.init(WebComponent.java:210) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:374) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:557) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.GenericServlet.init(GenericServlet.java:244) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:519) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:331) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:742) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:710) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:280) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at com.codeforindia.emrgncyres.main.EmergencyResponseService.main(EmergencyResponseService.java:25) [classes/:na]
+INFO  [2014-05-10 19:41:09,783] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 19:41:09,789] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
