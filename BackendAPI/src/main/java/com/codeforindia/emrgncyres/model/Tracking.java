@@ -17,7 +17,9 @@ import java.util.Date;
 
 @NamedQueries({
 	@NamedQuery(name="Tracking.findAll", query="SELECT t FROM Tracking t"),
-	@NamedQuery(name="Tracking.findTrackByKey", query="SELECT u FROM Tracking u where u.userDeatilsKey = :key")
+	@NamedQuery(name="Tracking.findTrackByKey", query="SELECT t FROM Tracking t")
+//	@NamedQuery(name="Tracking.findTrackByKey", query="SELECT t FROM Tracking t where t.userDetailsKey = :key")
+
 })
 
 
@@ -42,7 +44,7 @@ public class Tracking implements Serializable {
 	//bi-directional many-to-one association to UserDeatil
 	@ManyToOne
 	@JoinColumn(name="userDetailsKey")
-	private UserDetails userDeatil;
+	private UserDetails userDetail;
 
 	public Tracking() {
 	}
@@ -88,11 +90,11 @@ public class Tracking implements Serializable {
 	}
 
 	public UserDetails getUserDeatil() {
-		return this.userDeatil;
+		return this.userDetail;
 	}
 
-	public void setUserDeatil(UserDetails userDeatil) {
-		this.userDeatil = userDeatil;
+	public void setUserDeatil(UserDetails userDetail) {
+		this.userDetail = userDetail;
 	}
 
 }

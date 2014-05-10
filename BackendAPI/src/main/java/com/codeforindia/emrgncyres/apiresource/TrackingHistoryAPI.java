@@ -52,22 +52,4 @@ public class TrackingHistoryAPI {
 	}
 
 
-	@GET
-	@Timed(name = "allCheckInHistory")  
-	public Response allCheckInHistory() {
-		try{
-			
-			checkInHsitoryOperationService = new CheckInHistoryOperationServiceImpl();
-			List<TrackingHistory> userCheckInHistory = checkInHsitoryOperationService.getAllLocation();
-			return Response.status(200).entity(userCheckInHistory).build();
-
-		}catch( Exception ex){
-			return Response.status(400).entity("Error "+ ex.toString()).build();
-		}
-		finally{
-
-		}
-	}
-
-
 }

@@ -14,10 +14,8 @@ import java.util.Date;
 @Entity
 @Table(name="trackingHistory")
 
-@NamedQueries({
-	@NamedQuery(name="TrackingHistory.findAll", query="SELECT t FROM TrackingHistory t"),
-	@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u where u.userDeatilsKey = :key")
-})
+//@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u where u.userDetailsKey = :key")
+@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u")
 
 
 public class TrackingHistory implements Serializable {
@@ -47,7 +45,7 @@ public class TrackingHistory implements Serializable {
 	//bi-directional many-to-one association to UserDeatil
 	@ManyToOne
 	@JoinColumn(name="userDetailsKey")
-	private UserDetails userDeatil;
+	private UserDetails userDetail;
 
 	public TrackingHistory() {
 	}
@@ -108,12 +106,12 @@ public class TrackingHistory implements Serializable {
 		this.triggerAction = triggerAction;
 	}
 
-	public UserDetails getUserDeatil() {
-		return this.userDeatil;
+	public UserDetails getUserDetail() {
+		return this.userDetail;
 	}
 
-	public void setUserDeatil(UserDetails userDeatil) {
-		this.userDeatil = userDeatil;
+	public void setUserDetail(UserDetails userDeatil) {
+		this.userDetail = userDeatil;
 	}
 
 }

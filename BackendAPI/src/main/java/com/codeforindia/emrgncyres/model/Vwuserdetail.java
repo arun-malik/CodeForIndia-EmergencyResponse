@@ -51,7 +51,7 @@ public class Vwuserdetail implements Serializable {
 	private double userCode;
 
 	@Column(nullable=false)
-	private int userDeatilsKey;
+	private int userDetailsKey;
 
 	public Vwuserdetail() {
 	}
@@ -137,11 +137,11 @@ public class Vwuserdetail implements Serializable {
 	}
 
 	public int getUserDeatilsKey() {
-		return this.userDeatilsKey;
+		return this.userDetailsKey;
 	}
 
 	public void setUserDeatilsKey(int userDeatilsKey) {
-		this.userDeatilsKey = userDeatilsKey;
+		this.userDetailsKey = userDeatilsKey;
 	}
 
 }

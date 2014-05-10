@@ -69,7 +69,7 @@ public class UserOperationsServiceImpl implements UserOperationService {
 
 		entityManager.getTransaction().begin();
 
-		query = entityManager.createNamedQuery("UserDetails.findByUserDetailsKey").setParameter("key", user.getUserDeatilsKey());
+		query = entityManager.createNamedQuery("UserDetails.findByUserDetailsKey").setParameter("key", user.getUserDetailsKey());
 		List<UserDetails>  lstQueryRes = query.getResultList();
 
 		UserDetails userForUpdate = (UserDetails) lstQueryRes.toArray()[0];

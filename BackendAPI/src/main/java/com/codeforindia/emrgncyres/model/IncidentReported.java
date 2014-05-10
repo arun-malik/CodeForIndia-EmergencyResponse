@@ -34,10 +34,10 @@ public class IncidentReported implements Serializable {
 	
 	private int noOfUsers;
 
-	//bi-directional many-to-one association to UserDeatil
+	//bi-directional many-to-one association to UserDetail
 	@ManyToOne
 	@JoinColumn(name="userKey")
-	private UserDetails userDeatil;
+	private UserDetails userDetail;
 
 	public IncidentReported() {
 	}
@@ -74,12 +74,12 @@ public class IncidentReported implements Serializable {
 		this.reportedMessage = reportedMessage;
 	}
 
-	public UserDetails getUserDeatil() {
-		return this.userDeatil;
+	public UserDetails getUserDetail() {
+		return this.userDetail;
 	}
 
-	public void setUserDeatil(UserDetails userDeatil) {
-		this.userDeatil = userDeatil;
+	public void setUserDetail(UserDetails userDetail) {
+		this.userDetail = userDetail;
 	}
 	
 	public String getHelpNeeded() {

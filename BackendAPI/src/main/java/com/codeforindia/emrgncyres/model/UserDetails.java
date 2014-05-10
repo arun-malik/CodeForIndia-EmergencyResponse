@@ -8,14 +8,14 @@ import java.util.List;
 
 
 /**
- * The persistent class for the userDeatils database table.
+ * The persistent class for the userDetails database table.
  * 
  */
 @Entity
-@Table(name="userDeatils")
+@Table(name="userDetails")
 @NamedQueries({
 	@NamedQuery(name="UserDetails.findAll", query="SELECT u FROM UserDetails u"),
-	@NamedQuery(name="UserDetails.findByUserDetailsKey", query="SELECT u FROM UserDetails u where u.userDeatilsKey = :key")
+	@NamedQuery(name="UserDetails.findByUserDetailsKey", query="SELECT u FROM UserDetails u where u.userDetailsKey = :key")
 })
 
 public class UserDetails implements Serializable {
@@ -23,7 +23,7 @@ public class UserDetails implements Serializable {
 
 	@Id  @GeneratedValue
 	@Column(unique=true, nullable=false)
-	private int userDeatilsKey;
+	private int userDetailsKey;
 
 	@Column(length=45)
 	private String bloodGroup;
@@ -55,26 +55,26 @@ public class UserDetails implements Serializable {
 	private byte trackStatus;
 
 	//bi-directional many-to-one association to IncidentReported
-	@OneToMany(mappedBy="userDeatil")
+	@OneToMany(mappedBy="userDetail")
 	private List<IncidentReported> incidentReporteds;
 
 	//bi-directional many-to-one association to Tracking
-	@OneToMany(mappedBy="userDeatil")
+	@OneToMany(mappedBy="userDetail")
 	private List<Tracking> trackings;
 
 	//bi-directional many-to-one association to TrackingHistory
-	@OneToMany(mappedBy="userDeatil")
+	@OneToMany(mappedBy="userDetail")
 	private List<TrackingHistory> trackingHistories;
 
 	public UserDetails() {
 	}
 
-	public int getUserDeatilsKey() {
-		return this.userDeatilsKey;
+	public int getUserDetailsKey() {
+		return this.userDetailsKey;
 	}
 
-	public void setUserDeatilsKey(int userDeatilsKey) {
-		this.userDeatilsKey = userDeatilsKey;
+	public void setUserDetailsKey(int userDetailsKey) {
+		this.userDetailsKey = userDetailsKey;
 	}
 
 	public String getBloodGroup() {
@@ -175,14 +175,14 @@ public class UserDetails implements Serializable {
 
 	public IncidentReported addIncidentReported(IncidentReported incidentReported) {
 		getIncidentReporteds().add(incidentReported);
-		incidentReported.setUserDeatil(this);
+		incidentReported.setUserDetail(this);
 
 		return incidentReported;
 	}
 
 	public IncidentReported removeIncidentReported(IncidentReported incidentReported) {
 		getIncidentReporteds().remove(incidentReported);
-		incidentReported.setUserDeatil(null);
+		incidentReported.setUserDetail(null);
 
 		return incidentReported;
 	}
@@ -219,14 +219,14 @@ public class UserDetails implements Serializable {
 
 	public TrackingHistory addTrackingHistory(TrackingHistory trackingHistory) {
 		getTrackingHistories().add(trackingHistory);
-		trackingHistory.setUserDeatil(this);
+		trackingHistory.setUserDetail(this);
 
 		return trackingHistory;
 	}
 
 	public TrackingHistory removeTrackingHistory(TrackingHistory trackingHistory) {
 		getTrackingHistories().remove(trackingHistory);
-		trackingHistory.setUserDeatil(null);
+		trackingHistory.setUserDetail(null);
 
 		return trackingHistory;
 	}

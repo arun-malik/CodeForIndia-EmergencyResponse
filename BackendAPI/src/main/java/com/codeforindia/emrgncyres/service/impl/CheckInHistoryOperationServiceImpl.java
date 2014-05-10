@@ -24,13 +24,4 @@ public class CheckInHistoryOperationServiceImpl implements CheckInHistoryOperati
 
 		return lstQueryRes;
 	}
-
-	public List<TrackingHistory> getAllLocation() {
-		query = entityManager.createNamedQuery("TrackingHistory.findAll");
-		List<TrackingHistory>  lstQueryRes = query.getResultList();
-
-		//List<UserDetails> userList = (UserDetails) lstQueryRes.toArra;
-
-		return lstQueryRes;
-	}
 }

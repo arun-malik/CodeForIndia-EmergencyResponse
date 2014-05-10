@@ -8,5 +8,6 @@ public interface CheckInOperationService {
 	
 	public Tracking getUsersLastLocation(Integer userID);
 	public Tracking checkInLocation(Tracking checkinParam);
+	public List<Tracking> getAllLastLocation() ;
 
 }

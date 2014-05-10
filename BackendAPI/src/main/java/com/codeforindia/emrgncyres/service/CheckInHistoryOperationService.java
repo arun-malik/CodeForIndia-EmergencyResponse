@@ -8,5 +8,5 @@ import com.codeforindia.emrgncyres.model.TrackingHistory;
 public interface CheckInHistoryOperationService {
 
 	public List<TrackingHistory> getUsersAllLocation(Integer userID);
-	public List<TrackingHistory> getAllLocation();
+	
 }
