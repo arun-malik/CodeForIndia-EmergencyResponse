@@ -25,8 +25,14 @@ public class IncidentReported implements Serializable {
 	@Column(name="long", length=55)
 	private String long_;
 
-	@Column(length=200)
+	@Column(length=50)
 	private String reportedMessage;
+	
+	@Column(length=200)
+	private String helpNeeded;
+	
+	
+	private int noOfUsers;
 
 	//bi-directional many-to-one association to UserDeatil
 	@ManyToOne
@@ -75,5 +81,22 @@ public class IncidentReported implements Serializable {
 	public void setUserDeatil(UserDetails userDeatil) {
 		this.userDeatil = userDeatil;
 	}
+	
+	public String getHelpNeeded() {
+		return helpNeeded;
+	}
+
+	public void setHelpNeeded(String helpNeeded) {
+		this.helpNeeded = helpNeeded;
+	}
+
+	public int getNoOfUsers() {
+		return noOfUsers;
+	}
+
+	public void setNoOfUsers(int noOfUsers) {
+		this.noOfUsers = noOfUsers;
+	}
+
 
 }

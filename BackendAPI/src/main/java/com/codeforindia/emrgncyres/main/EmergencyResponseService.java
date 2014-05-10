@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.codeforindia.emrgncyres.apiresource.AdminAPI;
+import com.codeforindia.emrgncyres.apiresource.IncidentReportAPI;
+import com.codeforindia.emrgncyres.apiresource.NotificationAPI;
 import com.codeforindia.emrgncyres.apiresource.TrackingAPI;
 import com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI;
 import com.codeforindia.emrgncyres.apiresource.UserAPI;
@@ -43,6 +45,8 @@ public class EmergencyResponseService  extends Service<EmergencyResponseServiceC
 		environment.addResource(TrackingAPI.class);
 		environment.addResource(TrackingHistoryAPI.class);
 		
+		environment.addResource(NotificationAPI.class);
+		environment.addResource(IncidentReportAPI.class);
 		
 	}
 
