@@ -8073,3 +8073,667 @@ INFO  [2014-05-10 22:26:28,696] org.hibernate.engine.jdbc.connections.internal.D
 INFO  [2014-05-10 22:26:29,807] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
 INFO  [2014-05-10 22:26:29,842] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
 INFO  [2014-05-10 22:26:30,264] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+WARN  [2014-05-10 23:19:52,193] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:19:52,254] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:19:52,256] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 23:19:52,347] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:19:52,403] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:19:52,404] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:19:52,723] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:19:52,728] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:19:57,192] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:19:57,192] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:19:57,192] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:19:57,275] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-10 23:19:57,340] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-10 23:19:57,341] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-10 23:19:57,342] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-10 23:19:57,536] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-10 23:19:57,573] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-10 23:19:57,577] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://173.194.242.156:3306/emergencyresponsedb]
+INFO  [2014-05-10 23:19:57,577] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root, password=****}
+INFO  [2014-05-10 23:19:57,578] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-10 23:19:57,579] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-10 23:19:58,606] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-10 23:19:58,613] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-10 23:19:58,729] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2014-05-10 23:20:21,555] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:20:21,556] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:20:21,559] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:20:21,559] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:20:23,613] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:20:23,613] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:21:07,366] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:21:07,415] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:21:07,416] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-05-10 23:21:07,498] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:21:07,554] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:21:07,554] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:21:07,839] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:21:07,845] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:21:14,060] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:21:14,060] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:21:14,060] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:21:14,063] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:21:14,064] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:27:37,238] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:27:37,240] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:27:37,242] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:27:37,242] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:27:39,296] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:27:39,296] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:28:09,478] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:28:09,526] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:28:09,528] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-05-10 23:28:09,615] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:28:09,673] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:28:09,674] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:28:09,970] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:28:09,975] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:28:13,793] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:28:13,793] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:28:13,794] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:28:13,797] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:28:13,797] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:28:22,157] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:28:22,159] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:28:22,162] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:28:22,162] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:28:24,216] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:28:24,216] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:31:25,505] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:31:25,568] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:31:25,570] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 23:31:25,665] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:31:25,728] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:31:25,728] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:31:26,047] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:31:26,052] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:31:29,917] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:31:29,918] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:31:29,922] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:31:29,922] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:31:31,976] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:31:31,976] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:43:08,046] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:43:08,104] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:43:08,106] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-05-10 23:43:08,195] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:43:08,254] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:43:08,254] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:43:08,578] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:43:08,583] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:43:12,784] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:43:12,784] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:43:12,784] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:43:12,788] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:43:12,788] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:43:36,403] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:43:36,406] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:43:36,409] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:43:36,409] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:43:38,463] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:43:38,463] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:46:19,465] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:46:19,521] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:46:19,522] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 23:46:19,611] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:46:19,669] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:46:19,670] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:46:19,975] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:46:19,982] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:46:30,057] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:46:30,057] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:46:30,057] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:46:30,140] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-10 23:46:30,205] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-10 23:46:30,206] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-10 23:46:30,207] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-10 23:46:30,403] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-10 23:46:30,442] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-10 23:46:30,446] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://173.194.242.156:3306/emergencyresponsedb]
+INFO  [2014-05-10 23:46:30,446] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root, password=****}
+INFO  [2014-05-10 23:46:30,446] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-10 23:46:30,448] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-10 23:46:31,437] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-10 23:46:31,444] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-10 23:46:31,560] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2014-05-10 23:46:37,378] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:46:37,380] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:46:37,382] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:46:37,382] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:46:39,437] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:46:39,437] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:46:43,319] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:46:43,380] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:46:43,381] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-05-10 23:46:43,484] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:46:43,563] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:46:43,563] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:46:43,867] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:46:43,873] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:46:48,062] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:46:48,064] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:46:48,067] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:46:48,067] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:46:50,121] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:46:50,122] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:47:24,170] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:47:24,226] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:47:24,228] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-05-10 23:47:24,315] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:47:24,371] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:47:24,371] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:47:24,670] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:47:24,675] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:47:29,108] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:47:29,108] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:47:29,109] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:47:29,112] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:47:29,112] org.hibernate.jpa.boot.internal.PersistenceXmlParser: HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+INFO  [2014-05-10 23:48:03,220] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:48:03,221] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:48:03,224] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:48:03,224] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:48:05,278] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:48:05,278] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:49:01,867] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:49:01,926] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:49:01,928] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 23:49:02,017] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:49:02,081] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:49:02,081] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:49:02,413] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:49:02,418] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:55:02,506] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:55:02,581] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:55:02,584] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 23:55:02,688] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:55:02,754] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:55:02,755] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-10 23:55:03,166] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED InstrumentedBlockingChannelConnector@0.0.0.0:8000: java.net.BindException: Address already in use
+! java.net.BindException: Address already in use
+! at sun.nio.ch.Net.bind(Native Method) ~[na:1.6.0_65]
+! at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:124) ~[na:1.6.0_65]
+! at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:59) ~[na:1.6.0_65]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector.open(BlockingChannelConnector.java:127) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector.doStart(BlockingChannelConnector.java:85) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:291) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at com.codeforindia.emrgncyres.main.EmergencyResponseService.main(EmergencyResponseService.java:25) [classes/:na]
+WARN  [2014-05-10 23:55:03,169] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED SocketConnector@0.0.0.0:9000: java.net.BindException: Address already in use
+! java.net.BindException: Address already in use
+! at java.net.PlainSocketImpl.socketBind(Native Method) ~[na:1.6.0_65]
+! at java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:521) ~[na:1.6.0_65]
+! at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:414) ~[na:1.6.0_65]
+! at java.net.ServerSocket.bind(ServerSocket.java:326) ~[na:1.6.0_65]
+! at java.net.ServerSocket.<init>(ServerSocket.java:192) ~[na:1.6.0_65]
+! at java.net.ServerSocket.<init>(ServerSocket.java:148) ~[na:1.6.0_65]
+! at org.eclipse.jetty.server.bio.SocketConnector.newServerSocket(SocketConnector.java:96) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.bio.SocketConnector.open(SocketConnector.java:85) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.bio.SocketConnector.doStart(SocketConnector.java:156) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:291) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at com.codeforindia.emrgncyres.main.EmergencyResponseService.main(EmergencyResponseService.java:25) [classes/:na]
+WARN  [2014-05-10 23:55:03,170] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@3e40f7a8: MultiException[java.net.BindException: Address already in use, java.net.BindException: Address already in use]
+! org.eclipse.jetty.util.MultiException: Multiple exceptions
+! at org.eclipse.jetty.server.Server.doStart(Server.java:273) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at com.codeforindia.emrgncyres.main.EmergencyResponseService.main(EmergencyResponseService.java:25) [classes/:na]
+ERROR [2014-05-10 23:55:03,170] com.yammer.dropwizard.cli.ServerCommand: Unable to start server, shutting down
+! org.eclipse.jetty.util.MultiException: Multiple exceptions
+! at org.eclipse.jetty.server.Server.doStart(Server.java:273) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) ~[dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at com.codeforindia.emrgncyres.main.EmergencyResponseService.main(EmergencyResponseService.java:25) [classes/:na]
+INFO  [2014-05-10 23:55:03,170] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:55:03,170] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:55:03,174] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:55:03,174] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:55:05,013] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:55:05,014] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:55:05,014] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:55:05,014] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:55:05,176] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:55:05,176] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:55:07,068] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:55:07,068] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:55:10,473] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:55:10,533] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:55:10,535] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-10 23:55:10,623] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:55:10,680] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:55:10,680] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:55:11,003] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:55:11,009] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:56:05,389] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:56:05,389] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:56:05,389] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:56:05,478] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-10 23:56:05,549] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-10 23:56:05,551] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-10 23:56:05,552] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-10 23:56:05,721] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-10 23:56:05,754] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-10 23:56:05,758] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://173.194.242.156:3306/emergencyresponsedb]
+INFO  [2014-05-10 23:56:05,758] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root, password=****}
+INFO  [2014-05-10 23:56:05,758] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-10 23:56:05,759] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-10 23:56:06,832] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-10 23:56:06,840] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-10 23:56:06,951] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2014-05-10 23:56:14,734] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:56:14,736] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:56:14,738] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:56:14,739] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:56:16,793] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/malik/Documents/Projects/CodeForIndia-EmergencyResponse/BackendAPI/target/classes/}
+INFO  [2014-05-10 23:56:16,794] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-10 23:56:36,458] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-10 23:56:36,511] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-10 23:56:36,512] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-05-10 23:56:36,603] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-10 23:56:36,662] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-10 23:56:36,662] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-10 23:56:36,961] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:56:36,966] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-10 23:56:41,047] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:56:41,047] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-10 23:56:41,048] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-10 23:56:41,130] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-10 23:56:41,182] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-10 23:56:41,183] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-10 23:56:41,184] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-10 23:56:42,752] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-10 23:56:42,813] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-10 23:56:42,816] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://173.194.242.156:3306/emergencyresponsedb]
+INFO  [2014-05-10 23:56:42,817] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root, password=****}
+INFO  [2014-05-10 23:56:42,817] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-10 23:56:42,818] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-10 23:56:43,796] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-10 23:56:43,804] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-10 23:56:43,886] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2014-05-10 23:57:07,164] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9000
+INFO  [2014-05-10 23:57:07,166] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-10 23:57:07,168] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:57:07,168] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:57:09,223] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-05-10 23:57:09,223] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
