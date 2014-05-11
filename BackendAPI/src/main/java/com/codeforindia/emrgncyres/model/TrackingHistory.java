@@ -14,8 +14,8 @@ import java.util.Date;
 @Entity
 @Table(name="trackingHistory")
 
-//@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u where u.userDetailsKey = :key")
-@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u")
+@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u where u.userDetail = :key")
+//@NamedQuery(name="TrackingHistory.findAllByUser", query="SELECT u FROM TrackingHistory u")
 
 
 public class TrackingHistory implements Serializable {

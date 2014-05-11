@@ -17,8 +17,8 @@ import java.util.Date;
 
 @NamedQueries({
 	@NamedQuery(name="Tracking.findAll", query="SELECT t FROM Tracking t"),
-	@NamedQuery(name="Tracking.findTrackByKey", query="SELECT t FROM Tracking t")
-//	@NamedQuery(name="Tracking.findTrackByKey", query="SELECT t FROM Tracking t where t.userDetailsKey = :key")
+	//@NamedQuery(name="Tracking.findTrackByKey", query="SELECT t FROM Tracking t")
+	@NamedQuery(name="Tracking.findTrackByKey", query="SELECT t FROM Tracking t where t.userDetail = :key")
 
 })
 

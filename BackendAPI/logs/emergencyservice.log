@@ -8737,3 +8737,319 @@ INFO  [2014-05-10 23:57:07,168] org.eclipse.jetty.server.Server: Graceful shutdo
 INFO  [2014-05-10 23:57:07,168] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
 INFO  [2014-05-10 23:57:09,223] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
 INFO  [2014-05-10 23:57:09,223] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+WARN  [2014-05-11 00:39:05,340] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-11 00:39:05,405] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-11 00:39:05,407] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-11 00:39:05,504] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-11 00:39:05,596] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-11 00:39:05,596] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-11 00:39:06,039] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-11 00:39:06,047] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-11 00:39:43,027] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:39:43,027] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:39:43,028] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-11 00:39:43,210] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-11 00:39:43,432] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-11 00:39:43,439] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-11 00:39:43,442] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-11 00:39:44,003] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-11 00:39:44,084] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-11 00:39:44,095] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://173.194.242.156:3306/emergencyresponsedb]
+INFO  [2014-05-11 00:39:44,097] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root, password=****}
+INFO  [2014-05-11 00:39:44,097] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-11 00:39:44,102] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-11 00:39:45,213] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-11 00:39:45,244] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-11 00:39:45,660] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+ERROR [2014-05-11 00:39:47,267] org.hibernate.internal.SessionFactoryImpl: HHH000177: Error in named query: Tracking.findTrackByKey
+! org.hibernate.QueryException: could not resolve property: userDetailsKey of: com.codeforindia.emrgncyres.model.Tracking [SELECT t FROM com.codeforindia.emrgncyres.model.Tracking t where t.userDetailsKey = :key]
+! at org.hibernate.QueryException.generateQueryException(QueryException.java:137) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:120) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:234) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:158) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:126) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:88) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:190) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.internal.NamedQueryRepository.checkNamedQueries(NamedQueryRepository.java:161) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.internal.SessionFactoryImpl.checkNamedQueries(SessionFactoryImpl.java:1090) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:536) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850) ~[hibernate-entitymanager-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:843) ~[hibernate-entitymanager-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:397) [hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:842) [hibernate-entitymanager-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:75) [hibernate-entitymanager-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.ejb.HibernatePersistence.createEntityManagerFactory(HibernatePersistence.java:54) [hibernate-entitymanager-4.3.5.Final.jar:4.3.5.Final]
+! at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55) [hibernate-jpa-2.1-api-1.0.0.Final.jar:1.0.0.Final]
+! at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39) [hibernate-jpa-2.1-api-1.0.0.Final.jar:1.0.0.Final]
+! at com.codeforindia.emrgncyres.service.impl.UserOperationsServiceImpl.<init>(UserOperationsServiceImpl.java:21) [classes/:na]
+! at com.codeforindia.emrgncyres.apiresource.UserAPI.createUsers(UserAPI.java:53) [classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.6.0_65]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39) ~[na:1.6.0_65]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) ~[na:1.6.0_65]
+! at java.lang.reflect.Method.invoke(Method.java:597) ~[na:1.6.0_65]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) [jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.metrics.jersey.InstrumentedResourceMethodDispatchProvider$TimedRequestDispatcher.dispatch(InstrumentedResourceMethodDispatchProvider.java:32) [metrics-jersey-2.2.0.jar:na]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) [dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:695) [na:1.6.0_65]
+Caused by: ! org.hibernate.QueryException: could not resolve property: userDetailsKey of: com.codeforindia.emrgncyres.model.Tracking
+! at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:83) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:77) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:1978) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:367) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:500) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:652) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:275) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:219) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:126) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:121) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:945) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1264) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4639) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4111) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2096) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:794) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:595) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:299) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:247) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:278) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+! at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:206) ~[hibernate-core-4.3.5.Final.jar:4.3.5.Final]
+!... 66 common frames omitted
+WARN  [2014-05-11 00:41:40,328] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-11 00:41:40,398] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-11 00:41:40,401] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-11 00:41:40,484] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-11 00:41:40,565] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-11 00:41:40,565] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-11 00:41:40,986] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-11 00:41:40,996] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-11 00:41:56,256] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:41:56,257] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:41:56,257] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-11 00:41:56,443] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-11 00:41:56,670] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-11 00:41:56,676] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-11 00:41:56,679] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-11 00:41:57,240] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-11 00:41:57,331] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-11 00:41:57,342] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://173.194.242.156:3306/emergencyresponsedb]
+INFO  [2014-05-11 00:41:57,343] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root, password=****}
+INFO  [2014-05-11 00:41:57,344] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-11 00:41:57,347] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-11 00:41:58,697] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-11 00:41:58,727] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-11 00:41:59,147] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+WARN  [2014-05-11 00:43:46,648] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-11 00:43:46,721] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-11 00:43:46,723] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-11 00:43:46,810] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-11 00:43:46,892] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-11 00:43:46,892] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-11 00:43:47,284] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-11 00:43:47,292] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-11 00:44:04,054] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:44:04,055] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:44:04,055] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-11 00:44:04,237] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-11 00:44:04,449] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-11 00:44:04,456] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-11 00:44:04,460] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-11 00:44:05,029] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-11 00:44:05,111] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-11 00:44:05,122] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/emergencyresponsedb]
+INFO  [2014-05-11 00:44:05,123] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root}
+INFO  [2014-05-11 00:44:05,124] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-11 00:44:05,127] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-11 00:44:05,588] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-11 00:44:05,618] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-11 00:44:06,098] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+WARN  [2014-05-11 00:44:17,070] org.hibernate.engine.jdbc.spi.SqlExceptionHelper: SQL Error: 1146, SQLState: 42S02
+ERROR [2014-05-11 00:44:17,070] org.hibernate.engine.jdbc.spi.SqlExceptionHelper: Table 'emergencyresponsedb.userdetails' doesn't exist
+WARN  [2014-05-11 00:45:41,901] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-11 00:45:41,972] com.yammer.dropwizard.cli.ServerCommand: Starting emergencyResponse-service
+INFO  [2014-05-11 00:45:41,975] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-11 00:45:42,067] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-11 00:45:42,150] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /admin/ping (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /admin/{username} (com.codeforindia.emrgncyres.apiresource.AdminAPI)
+    GET     /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/ping (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    POST    /users/{userID} (com.codeforindia.emrgncyres.apiresource.UserAPI)
+    GET     /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkIn/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    POST    /checkIn (com.codeforindia.emrgncyres.apiresource.TrackingAPI)
+    GET     /checkInHistory/{userID} (com.codeforindia.emrgncyres.apiresource.TrackingHistoryAPI)
+    GET     /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    POST    /notification (com.codeforindia.emrgncyres.apiresource.NotificationAPI)
+    GET     /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+    POST    /incident (com.codeforindia.emrgncyres.apiresource.IncidentReportAPI)
+
+INFO  [2014-05-11 00:45:42,151] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-11 00:45:42,555] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8000
+INFO  [2014-05-11 00:45:42,566] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+WARN  [2014-05-11 00:45:54,057] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:45:54,058] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+WARN  [2014-05-11 00:45:54,058] org.hibernate.ejb.HibernatePersistence: HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+INFO  [2014-05-11 00:45:54,158] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [
+	name: EmergencyResponse
+	...]
+INFO  [2014-05-11 00:45:54,226] org.hibernate.Version: HHH000412: Hibernate Core {4.3.5.Final}
+INFO  [2014-05-11 00:45:54,228] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2014-05-11 00:45:54,229] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2014-05-11 00:45:54,439] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+WARN  [2014-05-11 00:45:54,476] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+INFO  [2014-05-11 00:45:54,481] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/emergencyresponsedb]
+INFO  [2014-05-11 00:45:54,482] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000046: Connection properties: {user=root}
+INFO  [2014-05-11 00:45:54,482] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000006: Autocommit mode: false
+INFO  [2014-05-11 00:45:54,483] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: HHH000115: Hibernate connection pool size: 20 (min=1)
+INFO  [2014-05-11 00:45:54,705] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+INFO  [2014-05-11 00:45:54,714] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2014-05-11 00:45:54,856] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
