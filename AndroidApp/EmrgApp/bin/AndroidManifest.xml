@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.emrgapp"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+ 
+    <application android:icon="@drawable/ic_launcher" 
+        android:label="Emergency Response"  
+        android:theme="@android:style/Theme.Light">
+        <activity android:name="com.example.emrgapp.MainActivity"
+                  android:label="Emergency Response">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         
+        <!--  track Activity -->
+        <activity android:name="com.example.emrgapp.TrackingActivity" />
+         
+        <!--  Profile Activity -->
+        <activity android:name="com.example.emrgapp.ProfileInfoActivity" />
+         
+        <!--  Report Activity -->
+        <activity android:name="com.example.emrgapp.ReportIncidentActivity" />
+        
+        <!--  Fellow Activity -->
+        <activity android:name="com.example.emrgapp.FellowTrackActivity" />
+        
+        <receiver android:name="com.example.emrgapp.GPSLocationBroadcastReceiver" />
+        
+        <service android:name="com.example.emrgapp.LocationUpdateService"/>
+        
+        <service android:name="com.example.emrgapp.SharedPreferenceService"/>
+ 
+    </application>
+</manifest>

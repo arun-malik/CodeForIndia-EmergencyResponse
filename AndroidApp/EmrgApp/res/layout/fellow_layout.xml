@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+   
+   <EditText
+        android:id="@+id/fellowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/NoOfPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fellowMobile"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/EmergencyContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/NoOfPerson"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1Fellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fellowName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/fellowName"
+        android:layout_toLeftOf="@+id/fellowName"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView3Fellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fellowMothersName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/fellowMothersName"
+        android:layout_toLeftOf="@+id/fellowMothersName"
+        android:text="Mother&apos;s Name"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView4Fellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fellowMobile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/fellowMobile"
+        android:layout_toLeftOf="@+id/fellowMobile"
+        android:text="Mobile No."
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView5Fellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/NoOfPerson"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/NoOfPerson"
+        android:layout_toLeftOf="@+id/NoOfPerson"
+        android:text="No. of Persons"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView6Fellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/EmergencyContact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView5Fellow"
+        android:layout_alignTop="@+id/EmergencyContact"
+        android:text="Emergency contact"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/fellowFatherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fellowName"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/fellowMothersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fellowFatherName"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/fellowMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fellowMothersName"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textView2Fellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fellowMothersName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/fellowFatherName"
+        android:layout_toLeftOf="@+id/fellowFatherName"
+        android:text="Father&apos;s Name"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/saveButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_selector"
+        android:onClick="checkInFellowProfile" />
+
+</RelativeLayout>
